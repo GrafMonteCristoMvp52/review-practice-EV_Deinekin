@@ -1,30 +1,23 @@
-num1 = input("Введите первое число: ")  
-num2 = input("Введите второе число: ") 
+print ('Приветствуем вас в калькуляторе Python')
+q1 = int (input('Введите число 1: '))
+q2 = int (input('Введите число 2: '))
 
-num1 = float(input("Введите первое число: "))  
-num2 = float(input("Введите второе число: ")) 
- 
-print("Выберите операцию:")  
-print("1. Сложение")  
-print("2. Вычитание")  
-print("3. Умножение")  
-print("4. Деление") 
- 
-operation = input("Введите номер операции (1/2/3/4): ") 
+v = int (input('Какую операцию вы хотите выполнить? \n 1 Сложение \n 2 Вычитание \n 3 Деление \n 4 Умножение \n'))
 
-if operation == "1":  
-    result = num1 + num2  
-elif operation == "2":  
-    result = num1 - num2  
-elif operation == "3":  
-    result = num1 * num2  
-elif operation == "4":  
-    if num2 != 0:  
-        result = num1 / num2  
-    else:  
-        result = "Ошибка: деление на ноль!"  
-else:  
-    result = "Ошибка: некорректная операция." 
-  
-print(f"Результат: {result}")  
-
+if v == 1:
+    r = q1 + q2
+    p = 'сложения'
+    t = p
+if v == 2:
+    r = q1 - q2
+    l = 'вычитания'
+    t = l
+if v == 3:
+    r = float(q1 / q2)
+    m = 'деления'
+    t = m
+if v == 4:
+    r = q1 * q2
+    n = 'умножения'
+    t = n
+print ('Результат ',t,' = ',r)
